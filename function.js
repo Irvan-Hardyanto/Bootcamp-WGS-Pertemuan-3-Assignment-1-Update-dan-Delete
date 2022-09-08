@@ -21,7 +21,7 @@ if(!fs.existsSync(dataPath)){
 //fungsi untuk memeriksa format nomor telepon
 const validateMobile=(mobile)=>{
     if(mobile){//nomor telepon tidak wajib diisi, jadi harus diperiksa dulu udah diisi atau belum
-        const isValidMobile = validator.isMobilePhone(mobile,'id-ID');
+        const isValidMobile = validator.isMobilePhone(mobile,'id-ID');//periksa nomor telepon yang dimasukkan
         if(!isValidMobile){
             console.log("wrong phone number format!");
         }
@@ -32,7 +32,7 @@ const validateMobile=(mobile)=>{
 
 //fungsi untuk memeriksa format email
 const validateEmail=(email)=>{
-    const isValidEmail = validator.isEmail(email);
+    const isValidEmail = validator.isEmail(email);//periksa nomor email yang dimasukkan
     if(email){//email tidak wajib diisi, jadi harus diperiksa dulu udah diisi atau belum
         if(!isValidEmail){
             console.log("wrong email format!");
@@ -159,7 +159,7 @@ const updateContact=(oldName,newName,newMobile,newEmail)=>{
 
         //validasi nomor telepon baru
         if(newMobile){//nomor telepon tidak wajib diisi, jadi harus diperiksa dulu udah diisi atau belum
-            if(!validator.isMobilePhone(newMobile,'id-ID')){
+            if(!validator.isMobilePhone(newMobile,'id-ID')){//periksa nomor telepon yang dimasukkan
                 console.log("wrong phone number format!");
                 return;// di return supaya ketika nomor telfon nya salah, tidak dimasukkan ke contacts
             }
@@ -167,7 +167,7 @@ const updateContact=(oldName,newName,newMobile,newEmail)=>{
 
         //validasi email baru
         if(newEmail){//email tidak wajib diisi, jadi harus diperiksa dulu udah diisi atau belum
-            if(!validator.isEmail(newEmail)){
+            if(!validator.isEmail(newEmail)){//periksa nomor email yang dimasukkan
                 console.log("wrong email format!");
                 return;// di return supaya ketika email nya salah, tidak dimasukkan ke contacts
             }

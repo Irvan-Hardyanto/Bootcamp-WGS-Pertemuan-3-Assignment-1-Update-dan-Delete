@@ -32,6 +32,8 @@ yargs.command({//buat command baru bernama add
         
     },
 })
+
+//buat command baru bernama list
 yargs.command({
     command:'list',
     describe: 'see contact list',
@@ -40,6 +42,7 @@ yargs.command({
     }
 })
 
+//buat command baru bernama detail
 yargs.command({
     command:'detail',
     describe: 'see details for a name',
@@ -55,6 +58,7 @@ yargs.command({
     },
 })
 
+//buat command baru bernama delete
 yargs.command({
     command: 'delete',
     describe: 'delete a contact',
@@ -70,6 +74,7 @@ yargs.command({
     }
 })
 
+//buat command baru bernama update
 yargs.command({
     command: 'update',
     describe: 'delete a contact',
