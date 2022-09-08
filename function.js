@@ -133,7 +133,7 @@ const deleteContact=(name)=>{//sebenarnya kode buat nulis ke file json bisa dipi
         return false;
     }else{//sebaliknya...
         contacts=contacts.filter(contact=>{//delete dari daftar kontak
-            return contact.name !=name;
+            return contact.name.toLowerCase() !=name.toLowerCase();
         });
         fs.writeFileSync(dataPath,'[]');//kosongkan file contacts.json dengan cara menimpa isinya dengan array kosong
     }
